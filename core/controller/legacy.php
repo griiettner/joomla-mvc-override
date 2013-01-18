@@ -48,6 +48,7 @@ abstract class JControllerLegacy extends JControllerLegacyLibraryDefault
 		}
 		
 		$includePaths = array();
+		$option = JFactory::getApplication()->input->get('option');
 
 		// Check for a controller.task command.
 		if (strpos($command, '.') !== false)
@@ -58,7 +59,6 @@ abstract class JControllerLegacy extends JControllerLegacyLibraryDefault
 			// Define the controller filename and path.
 			$file = self::createFileName('controller', array('name' => $type, 'format' => $format));
 			
-			$option = JFactory::getApplication()->input->get('option');
 			//template name
 			$template = JFactory::getApplication()->getTemplate();
 			
