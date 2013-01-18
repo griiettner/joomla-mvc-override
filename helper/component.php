@@ -100,6 +100,7 @@ class MVCOverrideHelperComponent
 	 */
 	private function loadComponentFiles($option)
 	{
+		jimport( 'joomla.filesystem.folder' );
 		$JPATH_COMPONENT = JPATH_BASE.'/components/'.$option;
 		$files = array();
 		
